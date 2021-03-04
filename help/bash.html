@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EtS - Spécififité technique</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./ressources/style.css">
+    <figure>
+        <a href="index.html"><img src="./ressources/ETSFinal.png" style="width:1080px"></a>
+    </figure>
+</head>
+<body>
+<h0 id="sommaire">Sommaire</h0>
+<ul>
+    <li><a href="#bash">Le language Bash</a></li>
+    <li><a href="#general">squellette d'un challenge</a></li>
+    <li><a href="#NC">Nous contacter</a></li>
+</ul>
+<h1 id="bash">Le language Bash</h1>
+
+<div>
+    Pour programmer les challenges de manière autonome, on utilise le langage de référence du terminal Unix: bash. La
+    version proposée ici est allégé et seul certaines fonctionnalités sont implémentées. </br>
+    -variable: une variable contient de l'information sous forme de texte et elle permet notamment de faciliter
+    l'écriture des scripts, la notation est $+le nom de la variable, dans le cas ou l'on souhaite faire des
+    concaténations</br>
+    on dispose d'une autre écriture : ${nom variable}. Enfin pour affecter une variable, on utilise l'écriture: "nom
+    variable"="valeur de la variable". On note notamment qu'il ne doit pas y avoir d'escape entre ces différents </br>
+    éléments. Une commande dont l'exécution s'est déroulée sans problème affecte à la variable $? la valeur 0 et 1 dans
+    le cas contraire.</br>
+
+    - création de fonctions: une fonction peut avoir n arguments et peut renvoyer un résultat. Dans le contexte local de
+    la fonction, on accède aux arguments avec les variables: $1 ... $n et $# indique le nombre d'arguments (ici n).</br>
+    On les définit de la manière suivante:</br>
+    f(){ code }</br>
+    Un appel de la fonction s'effectue en utilisant l'écriture: f</br>
+
+    - L'interpréteur gére également les sous commandes de la forme ("commande"), ces dernières sont lancés avec un
+    contexte local et leur résultat peut être utilisées dans l'entrée standard d'une commande ou pour définir une
+    variable.</br>
+    exemple:  </br>
+
+    - des blocks de contrôle: comme la plupart des langages, bash dispose de plusieurs block de contrôle, on en donne
+    les syntaxes ici:
+    if "condition" then</br>
+    "code"</br>
+    else</br>
+    "code"</br>
+    fi</br>
+    Le else est optionnel.</br>
+
+    while "condition" do</br>
+    "code"</br>
+    done</br>
+
+    for k in "list" do </br>
+    "code"</br>
+    done</br>
+    La liste correspond à une succession de chaînes de caractères: par exemple comme 1 2 3 4 5, for est exécuté ici 5
+    fois.</br>
+
+    case "expression" in</br>
+    i) "code" ;;</br>
+    j) "code" ;;</br>
+    esac</br>
+
+    i,j représente des chaînes de caractères et peuvent intégrer des éléments de regex.</br>
+
+    - On peut définir des alias qui permettent de simplifier l'écriture des commandes, On créé un alias de la manière
+    suivante:</br>
+    alias f="commande"</br>
+
+    -Des opérateurs binaires sont disponibles pour effectuer des commandes complexes:</br>
+    "commande1" | "commande2" redirige la sortie standard de commande1 avec l'entrée standard de commande2</br>
+    "commande" > file : permet de rediriger le flux stdout vers un fichier, si le fichier existe déjà, à condition de
+    possèder les permissions nécessaires, ce dernier est écrasé.</br>
+    "commande" >> file : quasi identique à > mais le flux est ajouté en fin de fichier.</br>
+    "commande1" || "commande2" : si la commande1 est un succès ($? =0), la commande 2 n'est pas exécuté. Si la commande1
+    est un échec ($? !=0), la commande 2 est exécuté.</br>
+    "commande1" && "commande2": même principe que || mais la commande2 est exécuté uniquement si commande1 est un
+    succès.</br>
+    command < file : redirige un fichier dans l'entrée standard de la commande.</br>
+
+    - Le système de fichier est similaire à Unix et permet la création de lien physique, symbolique ainsi que la gestion
+    des permissions.</br>
+    - En complément du point précedent, un système de groupes et d'utilisateur a été implémenté.</br>
+    - Pour faciliter la compréhension du terminal, les codes couleurs et le système de changement de polices
+    habituellement utilisés en Unix on également été ajouté par exemple:</br>
+    echo "\e[31mCheval\e[0m" : affiche le mot Cheval en rouge.</br>
+    - La commande music permet de charger des morceaux musicaux stockés dans le système de fichier.</br>
+
+
+    <h1 id="general">squelette d'un challenge</h1>
+    Un challenge se décompose en plusieurs éléments: un système de fichier composés d'une racine uniquement accessibles
+    aux administrateurs (personnes dans le groupe root, en général</br>
+    root et shaper) avec plusieurs éléments:</br>
+    commandScript.sh : ce script est lancé à chaque validation d'une commande par le challenger.</br>
+    initScript.sh/tout les scripts dans le dossier scripts : ces scripts sont lancés après le chargement du
+    challenge.</br>
+    mainScript.sh : ce script est exécutable par le challenger.</br>
+    endScript.sh : ce script se déclenche lors de la fin (victoire) d'un challenge.</br>
+</div>
+
+<h1 id=NC>Nous contacter </h1>
+<div>
+    Pour toute question ou remarque veuillez nous contacter à l'adresse mail suivante :</br>
+    gl-dodo-a-gilles@listes.enssat.fr</br>
+</div>
+</body>
+<div class="row">
+    <div class="column">
+        <img src="./ressources/devsc.png" style="width:540px">
+    </div>
+    <div class="column">
+        <img src="./ressources/LogoST.png" style="width:540px">
+    </div>
+</div>
+
+<button onclick="topFunction()" id="myBtn"></button>
+
+<script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+</html>

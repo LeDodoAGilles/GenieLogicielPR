@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interface.GameGUI">
+   <center>
+      <SplitPane dividerPositions="0.5551378446115288">
+         <items>
+            <BorderPane fx:id="terminalPane" minWidth="300.0" />
+            <VBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <BorderPane VBox.vgrow="ALWAYS">
+                     <center>
+                        <TextArea fx:id="notepad" promptText="Durant le challenge, vous pouvez prendre des notes ici. Par exemple, vous pouvez y écrire les indices que vous avez obtenus jusqu'à présent. Attention cependant, tout ce que vous écrirez ici sera effacé en quittant le challenge." BorderPane.alignment="CENTER" />
+                     </center>
+                     <top>
+                        <Label minHeight="-Infinity" minWidth="-Infinity" text="Bloc-notes personnel" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </top>
+                  </BorderPane>
+                  <ScrollPane fx:id="infosScrollPane" fitToWidth="true" hbarPolicy="NEVER">
+                     <content>
+                        <TextFlow fx:id="infos" prefHeight="70.0" style="-fx-background-color: white;" />
+                     </content>
+                  </ScrollPane>
+                  <BorderPane>
+                     <right>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#unlock" text="Unlock" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets left="10.0" />
+                           </BorderPane.margin>
+                        </Button>
+                     </right>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <center>
+                        <TextField fx:id="passwordTF" onKeyPressed="#onPasswordTFKeyPressed" promptText="Rentrez le mot de passe puis cliquez sur Unlock" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane>
+                     <left>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" onMouseClicked="#selectOption" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/option.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" onMouseClicked="#selectInfo" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/info.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </left>
+                     <right>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectReturn" text="Quitter" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </Button>
+                     </right>
+                     <center>
+                        <Label fx:id="timeLabel" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" styleClass="timer" text="00:00:00" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </center>
+                  </BorderPane>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </items>
+      </SplitPane>
+   </center>
+</BorderPane>

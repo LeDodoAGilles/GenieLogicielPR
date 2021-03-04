@@ -1,0 +1,57 @@
+Nano est un éditeur de texte avec de nombreuses options et possibilités.
+Pour avoir une liste des options disponibles, exécutez la commande : man nano
+
+Voici la liste des raccourcis claviers disponibles dans l'interface principale.
+Certains d'entre eux sont rappelés en bas de l'interface.
+Les raccourcis alternatifs sont indiqués entre parenthèses.
+
+^ désigne la touche Controle / Ctrl .
+M- désigne la touche Alt, ou la touche Meta pour les Macs.
+
+
+RACCOURCIS DISPONIBLES
+
+^G  (F1)   Affiche cette aide.
+M-N        Cache/Montre les numéros de ligne.
+escape-X   Cache/Montre le rappel des raccourcis en bas de l'interface.
+
+^X  (F2)   Ferme le fichier / Quitte nano.
+^S         Sauvegarde le fichier actuel.
+^O  (F3)   Sauvegarde le fichier sous le nom donné.
+
+^A         Sélectionne tout. Unique à Escape the Shell.
+M-A        Marque la position actuelle du curseur.
+           Déplacez-vous ensuite pour créer une sélection.
+           Réappuyez sur M-A pour terminer la sélection.
+           Vous pouvez aussi utiliser la souris pour sélectionner.
+
+M-6        Copie la sélection dans le presse-papier.
+^K  (F9)   Coupe la sélection dans le presse-papier.
+^U  (F10)  Colle depuis le presse-papier.
+
+M-U        Undo : Annule la dernière modification.
+M-E        Redo : Refait la dernière modification annulée.
+
+backspace  (^H)  Supprime le caractère à gauche du curseur.
+delete     (^D)  Supprime le caractère à droite du curseur.
+
+←          (^B)  Va un caractère à gauche.
+→          (^F)  Va un caractère à droite.
+home             Va au début de la ligne.
+end        (^E)  Va à la fin de la ligne.
+↑          (^P)  Va à la ligne précédente.
+↓          (^N)  Va à la ligne suivante.
+pageup     (^Y)  Va à la page précédente.
+pagedown   (^B)  Va à la page suivante.
+
+
+REMARQUES
+
+S'il n'y a aucune sélection, Couper et Coller ne font rien, contrairement
+au vrai nano qui copie/coupe la ligne actuelle.
+
+Ctrl+S est indisponible si nano a été lancé avec l'option −p / −−preserve.
+
+Dans un but pédagogique, la recherche depuis nano est indisponible.
+Vous devez pour cela utiliser la commande grep.
+Pour plus d'informations, exécutez la commande : man grep

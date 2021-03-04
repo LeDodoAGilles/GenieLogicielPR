@@ -1,0 +1,43 @@
+
+.terminal {
+    -fx-background-color: terminal-background;
+    -fx-font-family: 'Consolas'; /* monospace */
+    -fx-font-size: 12pt;
+}
+
+/*.terminal .selection {
+    -fx-fill: pink;
+}*/
+
+/* numéros de ligne */
+.lineno {
+    -fx-background-color: terminal-White;
+    -fx-text-fill: terminal-Black;
+    -fx-font-family: 'Consolas'; /* monospace */
+    -fx-font-size: 12pt;
+}
+
+.terminal .text {
+    -fx-fill: terminal-foreground;
+}
+
+.terminal .text.input-prefix {
+    -fx-fill: terminal-Bright-Black;
+}
+
+.terminal .text.terminal-text-error {
+    -fx-fill: terminal-Red;
+}
+
+.terminal .text.blink {
+    -fx-fill: blink-foreground;
+    -rtfx-background-color: blink-background;
+}
+
+.man-terminal ParagraphText {
+    -fx-tab-size: 7; /* JavaFX 14 */
+}
+
+.nano-terminal ParagraphText {
+    -fx-tab-size: 8; /* JavaFX 14 */
+}

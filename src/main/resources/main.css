@@ -1,0 +1,72 @@
+/* font-family ignoré en version >= 8u60 et le vrai nom est utilisé à la place.
+DONC pour un max de compatibilité, mettre font-family avec LE VRAI NOM du font.
+*/
+
+@font-face {
+    font-family: 'Fette classic UNZ Fraktur';
+    src: url('Fonts/FetteClassicUnzFraktur-KMne.ttf');
+}
+
+@font-face {
+    font-family: 'Consolas';
+    src: url('Fonts/consola.ttf');
+}
+
+@font-face {
+    font-family: 'Consolas';
+    src: url('Fonts/consolab.ttf');
+}
+
+@font-face {
+    font-family: 'Consolas';
+    src: url('Fonts/consolai.ttf');
+}
+
+@font-face {
+    font-family: 'Consolas';
+    src: url('Fonts/consolaz.ttf');
+}
+
+@font-face {
+    font-family: 'Determination Mono';
+    src: url('Fonts/Determination.ttf');
+}
+
+.timer .text {
+    -fx-font-family: 'Determination Mono';
+    -fx-font-size: 12pt;
+}
+
+.filecell.folder {
+
+}
+
+.filecell.softlink {
+    -fx-text-fill: blue;
+}
+
+.filecell.binary {
+    -fx-font-style: italic;
+}
+
+.filecell.data {
+
+}
+
+.filecell.required {
+    /*-fx-underline: true;*/
+    -fx-font-weight: bold;
+}
+
+
+/* exemples d'utilisation des styles importés */
+
+/*.label .text {
+    -fx-font-family: 'Determination Mono';
+    -fx-font-size: 12pt;
+}*/
+
+/*.button .text {
+    -fx-font-family: 'VRAI nom du font';
+    -fx-font-size: 12pt;
+}*/

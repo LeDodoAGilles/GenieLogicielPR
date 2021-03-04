@@ -1,0 +1,4 @@
+La commande man permet d'afficher l'aide d'une commande donnée.
+Cette aide est généralement composée d'une description de la commande et de ses options.
+
+Appuyez sur Ctrl+G pour revenir au début d'une aide.

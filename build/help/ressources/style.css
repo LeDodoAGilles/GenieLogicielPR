@@ -1,0 +1,89 @@
+/* || General setup */
+
+html {
+    padding: 0;
+    margin: 150px 5%;
+    font-size: 20px;
+    background-color: beige;
+    font-family: 'Wingdings', cursive;
+}
+
+body {
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* || Layout */
+
+/*Listing*/
+li {
+    color: #000000;
+    line-height: 1.5;
+}
+
+/*TOC*/
+h0 {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+/*Main parts*/
+h1 {
+    /*main part title*/
+    font-size: 4rem;
+    text-align: center;
+    color: #eeeeee;
+    text-shadow: 2px 2px 10px black;
+    font-family: 'Sonsie One', cursive;
+}
+
+/*Sub parts*/
+h2 {
+    /*subpart title*/
+    color: #000000;
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Sonsie One', cursive;
+}
+
+/*figures*/
+figure, video {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+/* || Special implementations*/
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 25%;
+    padding: 5px;
+}
+#myBtn {
+    background-image: url("arrow.png");
+    width: 80px;
+    height: 121px;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+#myBtn:hover {
+    content: url("arrow.png");
+    width: 80px;
+    height: 121px;
+    background-color: #555;
+}

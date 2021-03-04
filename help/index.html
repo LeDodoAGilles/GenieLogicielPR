@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Escape the Shell</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./ressources/style.css">
+    <figure>
+        <img src="./ressources/ETSFinal.png" style="width:1080px">
+    </figure>
+</head>
+<body>
+<h2 id="sommaire">Sommaire</h2>
+<h0>
+    <ul>
+    <li><a href="#IG">Informations générales</a></li>
+    <ul>
+        <li><a href="#IG.1">But et généralités</a></li>
+        <li><a href="#IG.2">Configuration informatique nécessaire</a></li>
+        <li><a href="#IG.3">Installation et désinstallation</a></li>
+        <li><a href="#IG.4">Licence</a></li>
+        <li><a href="#IG.5">Notes sur l’utilisation de la souris</a></li>
+    </ul>
+    <li><a href="#PC">Pour commencer</a></li>
+    <ul>
+        <li><a href="#PC.1">Généralités</a></li>
+        <li><a href="#PC.2">Lancement du logiciel</a></li>
+        <li><a href="#PC.3">Menu principal</a></li>
+    </ul>
+    <li><a href="#PM">Présentations des modes</a></li>
+    <ul>
+        <li><a href="#PM.1">Mode "un joueur"</a></li>
+        <li><a href="#PM.2">Mode "Multijoueurs"</a></li>
+        <li><a href="#PM.3">Mode "Éditeur"</a></li>
+    </ul>
+    <li><a href="#G">Gameplay</a></li>
+        <ul>
+            <li><a href="#G.1">Fil rouge des challenges</a></li>
+            <li><a href="#G.2">Commandes du terminal</a></li>
+            <li><a href="#G.3">Démonstration</a></li>
+        </ul>
+        <li><a href="#T">Technique</a></li>
+    <li><a href="#D">Dépannage</a></li>
+    <ul>
+        <li><a href="#D.1">Généralités</a></li>
+        <li><a href="#D.2">Problèmes de connexion</a></li>
+    </ul>
+    <li><a href="#S">Support</a></li>
+    <li><a href="#NC">Nous contacter</a></li>
+</ul>
+</h0>
+<h1 id=IG>Informations générales</h1>
+<h2 id=IG.1>But et généralités</h2>
+<div>
+    Le logiciel Escape the Shell est un logiciel d'apprentissage des commandes Bash aussi bien pour les néophytes que
+    pour les connaisseurs, il est dirigé par DevSchool et produit par Le Dodo à Gilles.</br>
+</div>
+<h2 id=IG.2>Configuration informatique nécessaire</h2>
+<div>
+    Escape the Shell à pour but de fonctionner sur les systèmes d’exploitation Apple Mac OS X, Microsoft Windows et les
+    différentes distributions de Linux.</br>
+    Il est requis pour le fonctionnement du logiciel que le poste informatique possède Java 11 ou une version
+    supérieure.</br>
+    Le matériel physique nécessaire à l'utilisation du logiciel est : un écran, une souris, et un clavier.</br>
+</div>
+<h2 id=IG.3>Installation et désinstallation </h2>
+<div>
+    Le logiciel Escape the Shell ne requiert pas d'installation, il comporte un fichier compressé .zip qu'il suffit de
+    décompresser.
+</div>
+<figure>
+    <img src="./ressources/unzip.png" style="width:1080px">
+</figure>
+<h2 id=IG.4>Licence</h2>
+<div>
+    Le logiciel Escape the Shell est un logiciel propriétaire appartenant à DevSchool.
+</div>
+<h2 id=IG.5>Notes sur l’utilisation de la souris</h2>
+<div>
+    Vous contrôlez la totalité des actions à l’aide de la souris, plus particulièrement avec le clic gauche, “Clic
+    gauche” (ou plus simplement “cliquer”) indique que vous appuyez puis relâchez sur le bouton situé sur le côté gauche
+    de la souris.</br>
+    Certains contrôles sont disponible avec le clic droit, de même des raccourcis claviers existent.</br>
+</div>
+
+<h1 id=PC>Pour commencer</h1>
+<h2 id=PC.1>Généralités</h2>
+<div>
+    Dans cette partie nous allons voir comment exécuter le logiciel et vous montrer les différentes interactions
+    possibles avec celui-ci.</br>
+</div>
+<h2 id=PC.2>Lancement du logiciel</h2>
+<div>
+    Afin d'exécuter le logiciel rendez vous dans le dossier dans lequel vous avez extrait le fichier .zip, et exécutez
+    le fichier .jar correspondant à votre système d'exploitation.</br>
+    Une fenêtre va alors s'ouvrir ainsi qu'un pop-up vous demandant de renseigner votre identifiant.
+</div>
+<figure>
+    <img src="./ressources/login.png" style="width:1080px">
+    <figcaption>Fenêtre principale et pop-up d’identification</figcaption>
+</figure>
+<h2 id=PC.3>Menu principal</h2>
+<div>
+    La fenêtre principale propose plusieurs boutons:
+</div>
+<figure>
+    <img src="./ressources/main.png" style="width:1080px">
+    <figcaption>Fenêtre principale</figcaption>
+</figure>
+<div>
+
+    <ul>
+        <li>1 - le mode un joueur</li>
+        <li>2 - le mode multijoueur</li>
+        <li>3 - l'éditeur de niveaux</li>
+        <li>4 - le menu des options</li>
+        <li>5 - le menu d'aide</li>
+        <li>6 - le bouton de fermeture</li>
+    </ul>
+</div>
+
+<h1 id="Opt">Menu des options</h1>
+<figure>
+    <img src="./ressources/options.png" style="width:1080px">
+    <figcaption>Menu des options</figcaption>
+</figure>
+<div>
+    Cette fenêtre permet à l'utilisateur de modifier l'aspect visuel de l'application selon ses préférences et son confort.
+</div>
+<h1 id=PM>Présentations des modes</h1>
+<div>Dans cette partie nous détaillons le fonctionnement et l'utilisation des différentes modes du logiciel.</div>
+<h2 id=PM.1>Mode "un joueur"</h2>
+<div>
+    Le mode <b>Un joueur</b> permet à l'utilisateur de se mesurer à différents challenges dans lesquels il doit user des
+    commandes Unix afin d'explorer un système de fichiers pour trouver un mot-de-passe afin de prendre le contrôle de la
+    session.</br>
+    En sélectionnant le bouton <b>Un joueur</b> un nouveau menu s'affiche.</br>
+</div>
+<figure>
+    <img src="./ressources/solo.png" style="width:1080px">
+    <figcaption>Choix du challenge</figcaption>
+</figure>
+<div>Dans celui-ci vous trouverez l'ensemble des challenges présents dans le dossier <b>challenges</b>. Un bouton <b>Menu
+    principal</b> vous permet de revenir au menu précédent, et le bouton <b>Rafraîchir</b> vous permet de recharger les
+    challenges en cas de modifications du contenu du dossier <b>challenges</b>.</br></div>
+<figure>
+    <img src="./ressources/chal.png" style="width:540px">
+    <figcaption>Bandeau d'information du challenge</figcaption>
+</figure>
+<div>En passant la souris sur un challenge il apparaît un bandeau informant de divers informations tels que le nom, la
+    difficulté, et une courte description.</br>
+    En haut à droite de certain challenge un panneau d'avertissement peut être présent et signifie que le challenge n'a
+    pas été validé. Pour plus d'information référez vous à la section <a href="#3.3"><b><i>Mode
+        "Éditeur"</i></b></a>.</br>
+    Pour démarrer un challenge cliquez dessus. L'interface va alors se modifier:</br>
+</div>
+<figure>
+    <img src="./ressources/terminal.png" style="width:1080px">
+    <figcaption>Le challenge est lancé!</figcaption>
+</figure>
+<div>Elle est maintenant composée d'une console simulant un terminal Unix dans lequel va se dérouler le challenge
+    <b>(1)</b>, un bloc-note pour l'utilisateur <b>(2)</b> ainsi qu'une zone d'information <b>(3)</b>.</br>
+    Le dernier champ de texte est pour le mot-de-passe qui peut être testé via le bouton <b>Unlock</b> <b>(4)</b>.</br>
+    Le bouton <b>Quitter</b> (5) renvoie au choix du challenge. Un chronomètre de la session en cours est également
+    disponible <b>(6)</b>.
+</div>
+<h2 id=PM.2>Mode "Multijoueurs"</h2>
+<div>
+    En sélectionnant le mode <b>Multijoueur</b> vous aurez le choix entre rejoindre une partie en tant que joueur ou
+    héberger une partie.</br>
+
+
+</div>
+<figure>
+    <img src="./ressources/multimenu.png" style="width:1080px">
+    <figcaption>Menu multijoueur</figcaption>
+</figure>
+<div>
+    Si vous souhaitez rejoindre une partie il vous faudra renseigner l'adresse IP du serveur et attendre le lancement du
+    challenge par le serveur.</br></br>
+</div>
+<figure>
+    <img src="./ressources/multiserv.png" style="width:1080px">
+    <figcaption>Salon du multijoueur</figcaption>
+</figure>
+<div>Si vous souhaitez héberger une partie, après avoir sélectionné le bouton correspondant appuyez sur le bouton <b>"Choisir"</b>
+    <b>(1)</b> pour sélectionner le challenge, la liste présente à droite recense tout les joueurs présent sur le
+    serveur <b>(2)</b>, une fois que tout vos joueurs sont présent, fermer l'accès (bouton fermer), partager le
+    challenge <b>(3)</b> et lancez-le <b>(4)</b>.</br></div>
+<h2 id=PM.3>Mode "Éditeur"</h2>
+<div>
+    Le mode <b>Éditeur</b> vous permet de créer et modifier des challenges. Pour se faire sélectionnez un challenge ou
+    choisissez <b>Créer un challenge</b>.</br>
+</div>
+<figure>
+    <img src="./ressources/choose.png" style="width:1080px">
+    <figcaption>Choix de l'édition</figcaption>
+</figure>
+<figure>
+    <img src="./ressources/editeur.png" style="width:1080px">
+    <figcaption>Édition du challenge</figcaption>
+</figure>
+<div>Dans le cadre supérieur <b>(1)</b> de l'éditeur se trouve les informations liées au challenges. Un terminal
+    <b>(2)</b> est présent pour éditer le challenge en utilisant les commandes Unix. L'onglet <b>Hiérarchie</b> présente
+    l'arborescence du système de fichier et permet de le modifier visuellement. L'onglet <b>Commandes et Vignette</b>
+    présente la liste des commandes à autorisé pour le challenge ainsi que la vignette (4) représentant le
+    challenge.</br>
+    Pour pouvoir partager et jouer un challenge il est nécessaire de le valider, afin de valider la faisabilité du
+    challenge.</br></br>
+    Pour favoriser la rejouabilité, la gestion des mots de passe permet de générer aléatoirement des mots de passe à partir d'expression régex par exemple:</br>
+    [0-9]{4} : correspond à toutes les combinaisons de 4 valeurs comprises entre 0 et 9.</br>
+    Pour un challenge il existe deux mots de passe, celui du Root et celui du Master. Le premier est celui à trouver lors du challenge et le second celui pour éditer le challenge.
+</div>
+
+<h2 id=""G>Gameplay</h2>
+<h2 id=G.1>Fil rouge des challenges</h2>
+<div>
+    On joue un personnage qui a été recruté par une bande de rebelles visant à atteindre et détruire une entité du nom de "Shaper", dans le premier challenge on doit faire ses preuves auprès du groupe en montrant que l'on a les compétences nécessaires aux missions que l'on nous présentera. Dans le deuxième challenge, nous sommes envoyés pour notre première mission en compagnie d'un nouveau personnage, dans le but de récupérer des informations sur "Shaper", notamment sa localisation. Dans le troisième challenge, grâce aux informations récupérées lors de notre mission précédente nous abordons le repère du dit "Shaper", cependant la mission ne se déroule pas comme prévu.
+</div>
+<h2 id=G.2>Commandes du terminal</h2>
+<div>
+    Lors d'une partie vous allez devoir utiliser différentes commandes pour arriver à vos fins. Elles sont nombreuses et variées, pour les connaître utiliser la commandes <i>help</i>, pour obtenir des informations sur une commande utiliser la commande <i>man</i> suivi de la commande en question.
+</div>
+<figure>
+    <img class=centeredIMG src="./ressources/comm.png" style="width:1080px">
+    <figcaption>Les commandes <i>help</i> et <i>man</i></figcaption>
+</figure>
+
+<h2 id=G.3>Démonstration </h2>
+<div>Voici une petite vidéo de démonstration d'un challenge.</div>
+<video width=50% controls>
+    <source src="./ressources/fluff.mp4" type="video/mp4" >
+</video>
+<h1 id=T>Techniques</h1>
+<div>
+    En ce qui concerne l'aspect technique veuillez vous référer à cette <a href="bash.html">page</a>
+</div>
+<h1 id=D>Dépannage</h1>
+<h2 id=D.1>Généralités</h2>
+<div>Le Dodo à Gilles accorde une grande importance à la qualité de ses produits. Il peut cependant arriver que vous
+    rencontriez des problèmes. Nous listons ici les principaux problèmes pouvant survenir.
+</div>
+<h2 id=D.2>Problèmes de connexion</h2>
+<div>Le serveur peut être configuré pour n'être disponible que sur un réseau local et ne pas être accessible via
+    internet. Si le problème persiste, vérifiez votre connexion au serveur. Pour cela vérifiez que votre ordinateur est
+    bien connecté au bon réseau, vérifiez les branchements et la connexion wifi. Au besoin, vérifiez aussi les
+    paramètres de votre VPN.
+</div>
+<h1 id=S>Support</h1>
+<div>
+    Le Dodo à Gilles vous permet d’obtenir des informations, un support technique et bien plus directement en nous
+    contactant à l'adresse que vous trouverez en fin de document.</br>
+    Si vous rencontrez un problème lors de l’utilisation, un service technique est là pour vous aider. </br>
+    Ce support technique peut :
+    <ul>
+        <li>vous aider à configurer correctement votre machine pour lancer le logiciel</li>
+        <li>vous aider à résoudre les problèmes de compatibilité entre votre matériel et le logiciel</li>
+        <li>vous informer des éventuelles mises à jour disponibles pour ce programme.</li>
+    </ul>
+    Avant de nous contacter, assurez-vous :
+    <ul>
+        <li>d’avoir lu la documentation liée au logiciel. Vous y trouverez peut-être la réponse à votre problème en
+            quelques secondes.
+        </li>
+        <li>de connaître la configuration de votre machine.</li>
+        <li>d’avoir noté les éventuels messages d’erreur apparus sur votre écran.</li>
+    </ul>
+    Pour le prix d’un mail, ce service vous présente les problèmes les plus fréquemment rencontrés, ainsi que les moyens
+    d’y remédier. Conçu par nos meilleurs experts, il est clair et simple d’utilisation. Si vous deviez ne trouviez pas
+    la réponse à votre question dans notre système expert, vous serez mis en contact avec un de nos techniciens, présent
+    toutes les semaines de 10h à 16h le quatrième jeudi de la semaine.</br>
+
+</div>
+<h1 id=NC>Nous contacter </h1>
+<div>
+    Pour toute question ou remarque veuillez nous contacter à l'adresse mail suivante :</br>
+    gl-dodo-a-gilles@listes.enssat.fr</br>
+</div>
+</body>
+<div class="row">
+    <div class="column">
+        <img src="./ressources/devsc.png" style="width:540px">
+    </div>
+    <div class="column">
+        <img src="./ressources/LogoST.png" style="width:540px">
+    </div>
+</div>
+
+<button onclick="topFunction()" id="myBtn" ></button>
+
+<script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+</html>

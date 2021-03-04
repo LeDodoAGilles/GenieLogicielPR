@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interface.CreateFileGUI">
+   <left>
+      <BorderPane BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <center>
+            <VBox alignment="CENTER">
+               <children>
+                  <BorderPane layoutX="10.0" layoutY="232.0">
+                     <left>
+                        <Label minHeight="-Infinity" minWidth="-Infinity" text="User" BorderPane.alignment="CENTER_LEFT">
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </left>
+                     <center>
+                        <ComboBox fx:id="userCB" BorderPane.alignment="CENTER_RIGHT" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane layoutX="10.0" layoutY="260.0">
+                     <left>
+                        <Label minHeight="-Infinity" minWidth="-Infinity" text="Group" BorderPane.alignment="CENTER_LEFT">
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </left>
+                     <center>
+                        <ComboBox fx:id="groupCB" BorderPane.alignment="CENTER_RIGHT" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane layoutX="10.0" layoutY="277.0">
+                     <left>
+                        <Label minHeight="-Infinity" minWidth="-Infinity" text="Permission (octal)" BorderPane.alignment="CENTER_LEFT">
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </left>
+                     <center>
+                        <TextField fx:id="permissionTF" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" BorderPane.alignment="CENTER_RIGHT" />
+                     </center>
+                     <bottom>
+                        <VBox BorderPane.alignment="CENTER">
+                           <children>
+                              <BorderPane>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <center>
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" text="user - group - other" />
+                                 </center>
+                              </BorderPane>
+                              <BorderPane>
+                                 <center>
+                                    <Label minHeight="-Infinity" minWidth="-Infinity" text="rwx - rwx - rwx" />
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </VBox>
+                     </bottom>
+                  </BorderPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <top>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane>
+                     <left>
+                        <Label minHeight="-Infinity" minWidth="-Infinity" text="Répertoire" BorderPane.alignment="CENTER_LEFT">
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </left>
+                     <center>
+                        <ComboBox fx:id="folderCB" editable="true" BorderPane.alignment="CENTER_RIGHT" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane>
+                     <left>
+                        <Label minHeight="-Infinity" minWidth="-Infinity" text="Nom" BorderPane.alignment="CENTER_LEFT">
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </left>
+                     <center>
+                        <TextField fx:id="nameTF" BorderPane.alignment="CENTER_RIGHT" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane>
+                     <left>
+                        <Label minHeight="-Infinity" minWidth="-Infinity" text="Type" BorderPane.alignment="CENTER_LEFT">
+                           <BorderPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </left>
+                     <right>
+                        <ComboBox fx:id="typeCB" BorderPane.alignment="CENTER_RIGHT" />
+                     </right>
+                  </BorderPane>
+               </children>
+            </VBox>
+         </top>
+         <bottom>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                     <children>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectImport" text="Importer" />
+                        <CheckBox fx:id="textModeCheckbox" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" selected="true" text="Forcer le mode texte" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <BorderPane>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <left>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectOK" text="OK" BorderPane.alignment="CENTER" />
+                     </left>
+                     <right>
+                        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectCancel" text="Annuler" BorderPane.alignment="CENTER" />
+                     </right>
+                  </BorderPane>
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </left>
+   <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
+         <content>
+            <TextArea fx:id="contentArea" />
+         </content>
+         <BorderPane.margin>
+            <Insets bottom="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </ScrollPane>
+   </center>
+</BorderPane>

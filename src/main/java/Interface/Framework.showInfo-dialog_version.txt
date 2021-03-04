@@ -1,0 +1,83 @@
+un enfer pour charger ça dans un dialog et pas dans le navigateur
+TODO : gérer les liens hypertextes, qui sont catch par le listener. ce listener charge un peu ce lien, puis retourne sur la page qu'il venait de quitter
+TODO : les liens des images
+TODO : les liens de javascript
+en bref, bien trop de choses pour si peu de temps restant
+
+
+
+    // https://stackoverflow.com/questions/32783532/applying-css-file-to-javafx-webview#answer-32785852
+    // init ower primary stage au cas où c'est invoqué depuis un dialog
+
+    /** Ouvre la page d'aide HTML dans une nouvelle fenêtre. Selon le GUI, différents points d'entrée sont possibles.
+     * En fait, charge l'aide dans un composant JavaFX.
+     * Si l'aide a été chargée correctement, alors l'affiche dans une nouvelle fenêtre.
+     * Sinon, affiche une erreur.
+     *
+     * @param html chemin vers le fichier HTML de l'aide à afficher */
+    public void showInfo(String html){
+        WebView browser = new WebView();
+        WebEngine webEngine = browser.getEngine();
+        java.io.File file = new java.io.File(html);
+        webEngine.load(file.toURI().toString()); // il lui faut une URL
+        //webEngine.loadContent("<html><head><style>body {\n\tbackground-color: lightblue;\n}</style></head><body>Some text.</body></html>");
+
+        webEngine.getLoadWorker().stateProperty().addListener((e, o, state) -> {
+            if (state == Worker.State.SUCCEEDED) { // si l'HTML s'est chargé correctement
+                Document doc = webEngine.getDocument();
+                Node head = doc.getDocumentElement().getElementsByTagName("head").item(0);
+
+                String title = "Escape the Shell - Aide";
+
+                // Parse la balise <head> et fait certains traitements
+                for(int i=0 ; i<head.getChildNodes().getLength() ; i++){
+                    Node child = head.getChildNodes().item(i);
+
+                    switch(child.getNodeName()){
+                        case "TITLE": // on récupère le titre du HTML pour en faire le titre de la fenêtre.
+                            title = child.getTextContent();
+                            break;
+                        case "LINK": // bizarrement, n'arrive pas à charger le css tout seul : on l'inclut de force
+                            Element link = (Element) child;
+                            String rel = link.getAttribute("rel");
+                            String type = link.getAttribute("type");
+
+                            if(rel != null && rel.equals("stylesheet") && (type == null || type.isEmpty() || type.equals("text/css"))){
+                                String styleRelPath = link.getAttribute("href");
+                                if(styleRelPath == null || styleRelPath.isEmpty())
+                                    continue;
+
+                                Path stylePath = Paths.get(Paths.get(file.toURI()).getParent().toString(), styleRelPath);
+                                String css;
+                                try {
+                                    css = Files.readString(stylePath, StandardCharsets.UTF_8);
+                                } catch (IOException ignored) { // fichier de style non trouvé : temps pis, on ignore
+                                    continue;
+                                }
+
+                                Element styleNode = doc.createElement("style");
+                                Text styleContent = doc.createTextNode(css);
+                                styleNode.appendChild(styleContent);
+
+                                head.removeChild(child); // on remplace
+                                head.appendChild(styleNode);
+
+                                if(browser.getScene() == null){
+                                    Stage stage = new Stage();
+                                    stage.getIcons().add(generateIconImage(icon));
+                                    stage.setTitle(title);
+                                    Scene scene = new Scene(browser, primaryStage.getWidth()/2, primaryStage.getHeight());
+                                    stage.setScene(scene);
+                                    stage.setResizable(true);
+                                    stage.show();
+                                }
+                            }
+                            break;
+                    }
+                }
+            }
+            else if(state == Worker.State.FAILED){ // else if car il y a aussi les états SCHEDULE et RUNNING lors du clic sur un lien hypertexte
+                showError("Aide non trouvée", "L'aide n'a pas pu être trouvée à l'adresse " + html);
+            }
+        });
+    }

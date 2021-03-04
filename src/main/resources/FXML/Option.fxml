@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interface.OptionGUI">
+   <bottom>
+      <BorderPane BorderPane.alignment="CENTER">
+         <left>
+            <Button mnemonicParsing="false" onAction="#selectOK" text="Valider" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Button mnemonicParsing="false" onAction="#selectReturn" text="Annuler" BorderPane.alignment="CENTER" />
+         </right>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </BorderPane>
+   </bottom>
+   <center>
+      <GridPane hgap="10.0" vgap="10.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BorderPane>
+               <center>
+                  <CheckBox fx:id="fullscreenCheck" mnemonicParsing="false" text="Plein écran" />
+               </center>
+            </BorderPane>
+            <BorderPane GridPane.columnIndex="1">
+               <center>
+                  <TextField fx:id="widthTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Largeur de la fenêtre" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </BorderPane>
+            <BorderPane GridPane.columnIndex="2">
+               <center>
+                  <TextField fx:id="heightTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Hauteur de la fenêtre" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </BorderPane>
+            <BorderPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <top>
+                  <Label text="Style de terminal" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <center>
+                  <ComboBox fx:id="terminalStyleCB" prefWidth="150.0" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+            <BorderPane GridPane.rowIndex="1">
+               <center>
+                  <TextField fx:id="caretTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Curseur / Caret" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="caretLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <center>
+                  <TextField fx:id="foregroundTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Texte du terminal" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="foregroundLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <center>
+                  <TextField fx:id="backgroundTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Fond du terminal" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="backgroundLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane GridPane.rowIndex="2">
+               <center>
+                  <TextField fx:id="blackTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Black" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="blackLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="10.0" layoutY="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <center>
+                  <TextField fx:id="BblackTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Bright Black (Gray)" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="BblackLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="10.0" layoutY="150.0" GridPane.rowIndex="3">
+               <center>
+                  <TextField fx:id="redTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Red" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="redLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="10.0" layoutY="225.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <center>
+                  <TextField fx:id="BredTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Bright Red" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="BredLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="10.0" layoutY="225.0" GridPane.rowIndex="4">
+               <center>
+                  <TextField fx:id="greenTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Green" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="greenLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="10.0" layoutY="300.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <center>
+                  <TextField fx:id="BgreenTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Bright Green" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="BgreenLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="10.0" layoutY="300.0" GridPane.rowIndex="5">
+               <center>
+                  <TextField fx:id="yellowTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Yellow" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="yellowLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="10.0" layoutY="375.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <center>
+                  <TextField fx:id="ByellowTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Bright Yellow" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="ByellowLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="10.0" layoutY="375.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <center>
+                  <TextField fx:id="blueTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Blue" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="blueLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="405.0" layoutY="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <center>
+                  <TextField fx:id="BblueTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Bright Blue" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="BblueLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="405.0" layoutY="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <center>
+                  <TextField fx:id="magentaTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Magenta" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="magentaLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="405.0" layoutY="225.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <center>
+                  <TextField fx:id="BmagentaTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Bright Magenta" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="BmagentaLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="405.0" layoutY="225.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <center>
+                  <TextField fx:id="cyanTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Cyan" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="cyanLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="405.0" layoutY="300.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <center>
+                  <TextField fx:id="BcyanTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Bright Cyan" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="BcyanLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="405.0" layoutY="300.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <center>
+                  <TextField fx:id="whiteTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="White" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="whiteLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane layoutX="405.0" layoutY="375.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <center>
+                  <TextField fx:id="BwhiteTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Bright White" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <bottom>
+                  <Label fx:id="BwhiteLabel" prefHeight="20.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+            <BorderPane GridPane.columnIndex="3">
+               <center>
+                  <TextField fx:id="portTF" BorderPane.alignment="CENTER" />
+               </center>
+               <top>
+                  <Label text="Port pour le Multijoueur" BorderPane.alignment="CENTER" />
+               </top>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </BorderPane>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+</BorderPane>
